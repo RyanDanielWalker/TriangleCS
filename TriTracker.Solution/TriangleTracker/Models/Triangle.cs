@@ -31,10 +31,9 @@ namespace TriangleTracker
     {
       return _sideThree;
     }
-
     public bool CheckAllSidesEqual()
     {
-      if (_sideOne == _sideTwo && _sideOne == _sideThree)
+      if (_sideOne == _sideTwo && _sideTwo == _sideThree)
       {
         return true;
       }
@@ -54,7 +53,7 @@ namespace TriangleTracker
 
     public bool CheckIfScalene()
     {
-      if (_sideOne != _sideTwo && _sideOne != _sideThree)
+      if (_sideOne != _sideTwo && _sideOne != _sideThree && _sideTwo != _sideThree)
       {
         return true;
       }
