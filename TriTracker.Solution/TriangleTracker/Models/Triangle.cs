@@ -41,5 +41,34 @@ namespace TriangleTracker
       return false;
     }
 
+    public bool CheckIsosceles()
+    {
+      if (_sideOne == _sideTwo && _sideOne != _sideThree ||
+      _sideTwo == _sideThree && _sideTwo != _sideOne ||
+      _sideThree == _sideOne && _sideThree != _sideTwo)
+      {
+        return true;
+      }
+      return false;
+    }
+
+    public bool CheckIfScalene()
+    {
+      if (_sideOne != _sideTwo && _sideOne != _sideThree)
+      {
+        return true;
+      }
+      return false;
+    }
+
+    public bool CheckIfTriangle()
+    {
+      if (_sideOne > (_sideTwo + _sideThree) || _sideTwo > (_sideOne + _sideThree) || _sideThree > (_sideOne + _sideTwo))
+      {
+        return false;
+      }
+      return true;
+    }
+
   }
 }
